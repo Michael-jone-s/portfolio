@@ -254,6 +254,20 @@
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
     }
   });
 
@@ -273,5 +287,99 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
+
+  // Skills animation
+  function animateSkills() {
+    const skillsSection = document.getElementById('skills');
+    
+    if (!skillsSection) return;
+    
+    const waypoint = new Waypoint({
+      element: skillsSection,
+      handler: function() {
+        const progressBars = document.querySelectorAll('.progress-bar');
+        progressBars.forEach(bar => {
+          const value = bar.getAttribute('aria-valuenow');
+          bar.style.width = value + '%';
+        });
+        this.destroy();
+      },
+      offset: '80%'
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    animateSkills();
+  });
+
+  // Enhanced animations and interactions
+  document.addEventListener('DOMContentLoaded', function() {
+    // Animate tech tags with delay
+    const techTags = document.querySelectorAll('.tech-tag');
+    techTags.forEach((tag, index) => {
+      tag.style.animationDelay = `${index * 0.1}s`;
+      tag.classList.add('animate__animated', 'animate__fadeIn');
+    });
+    
+    // Add mouseover effect to portfolio cards
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+    portfolioCards.forEach(card => {
+      card.addEventListener('mouseover', function() {
+        this.querySelector('.portfolio-content').style.backgroundColor = '#fafafa';
+      });
+      card.addEventListener('mouseout', function() {
+        this.querySelector('.portfolio-content').style.backgroundColor = '#fff';
+      });
+    });
+    
+    // Add scroll-reveal effect to timeline items
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    if (timelineItems.length > 0) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.2
+      });
+      
+      timelineItems.forEach(item => {
+        observer.observe(item);
+      });
+    }
+    
+    // Add typing effect to hero section tagline
+    const heroText = document.querySelector('.hero-text p:first-child');
+    if (heroText) {
+      heroText.style.opacity = '0';
+      setTimeout(() => {
+        heroText.style.opacity = '1';
+        heroText.classList.add('animate__animated', 'animate__fadeIn');
+      }, 1500);
+    }
+  });
+
+  // Scroll progress indicator
+  function initScrollProgress() {
+    const progressBar = document.getElementById('scrollProgress');
+    const percentDisplay = document.querySelector('.scroll-percent');
+    
+    if (!progressBar || !percentDisplay) return;
+    
+    window.addEventListener('scroll', () => {
+      const totalHeight = document.body.scrollHeight - window.innerHeight;
+      const progress = (window.pageYOffset / totalHeight) * 100;
+      progressBar.style.width = progress + '%';
+      percentDisplay.textContent = Math.round(progress) + '%';
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Other initializations...
+    initScrollProgress();
+  });
 
 })()
