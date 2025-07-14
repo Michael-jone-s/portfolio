@@ -27,23 +27,26 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
 
   <!-- ======= Mobile nav toggle button ======= -->
-  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
   <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+  
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex flex-column justify-content-center">    <nav id="navbar" class="navbar nav-menu">
-      <ul>
-        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-code-block"></i> <span>Skills</span></a></li>
-        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Area of Interest</span></a></li>
-        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-      </ul>
-    </nav><!-- .nav-menu -->
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-code-block"></i> <span>Skills</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a href="#project-timeline" class="nav-link scrollto"><i class="bx bx-time-five"></i> <span>Timeline</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Interests</span></a></li>
+          <!-- <li><a href="#testimonials" class="nav-link scrollto"><i class="bx bx-comment-detail"></i> <span>Testimonials</span></a></li> -->
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
 
   </header><!-- End Header -->
   <!-- ======= Hero Section ======= -->  <section id="hero" class="d-flex flex-column justify-content-center">
@@ -51,10 +54,24 @@
       <div class="hero-content">
         <h2><span class="wave">👋</span> Hello there!</h2>
         <h1>I'm <span class="highlight">Michael Jone S</span></h1>
-        <p class="hero-subtitle">I'm a <span class="typed" data-typed-items="Data Scientist, Machine Learning Engineer, Data Analyst, Associate Software Engineer, Problem Solver"></span></p>
+        <p class="hero-subtitle">I'm a <span class="typed" data-typed-items="Data Scientist, Machine Learning Engineer, AI Specialist, Associate Software Engineer, Problem Solver"></span></p>
         <div class="hero-text">
-          <p>Transforming complex data into actionable insights and innovative solutions</p>
-          <!-- <p class="hero-tagline">Currently working at <span class="company-highlight">CGI, Bangalore</span> as Associate Software Engineer</p> -->
+          <p>Transforming complex data into actionable insights and innovative AI solutions</p>
+          <p class="hero-tagline">Currently working at <span class="company-highlight">CGI, Bangalore</span> as Associate Software Engineer</p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number"><i class="bi bi-check-circle-fill"></i></span>
+              <span class="stat-label">AI-Driven Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number"><i class="bi bi-award-fill"></i></span>
+              <span class="stat-label">Platinum Award Winner</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number"><i class="bi bi-lightning-fill"></i></span>
+              <span class="stat-label">ML Specialist</span>
+            </div>
+          </div>
         </div>
         <div class="hero-buttons">
           <a href="#portfolio" class="btn-view-work">View My Work</a>
@@ -98,10 +115,14 @@
               
               <div class="about-text">
                 <p>
-                  I'm a data science graduate with expertise in machine learning, data analysis, and statistical modeling. My passion lies in extracting meaningful patterns from complex datasets to solve real-world problems and improve business outcomes.
+                  Data Science professional with 1.3 years of hands-on experience building AI and machine learning (ML) solutions that deliver measurable business
+                  outcomes. Proven track record of developing anomaly detection systems processing 6+ million records with 85% accuracy, creating synthetic data 
+                  frameworks maintaining 90% fidelity, and building AI-powered applications that reduce operational workload by up to 70%. Recognized with 
+                  Platinum Award from Business Unit leader for exceptional technical contribution and measurable business impact on AI anomaly detection system.
                 </p>
                 <p>
-                  With strong skills in Python, R, and SQL, I create data-driven solutions that help organizations make better decisions. I believe in the power of open data and open source software to democratize access to information and tools.
+                  Skilled in Python, SQL, and modern AI technologies including LLMs, RAG systems, and computer vision. Experience collaborating across 
+                  cross-functional teams to deliver 15+ automation reports and integrate AI-driven insights into existing business processes.
                 </p>
               </div>
             </div>
@@ -135,12 +156,10 @@
     <!-- ======= Skills Section ======= -->
     <section id="skills" class="skills section-bg">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
           <h2>Skills & Expertise</h2>
           <p>My technical toolkit and professional capabilities</p>
         </div>
-
         <div class="row">
           <!-- Technical Skills Column -->
           <div class="col-lg-6">
@@ -253,6 +272,37 @@
           </div>
         </div>
 
+        <!-- Technologies Cloud Section -->
+        <div class="row mt-5" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-12">
+            <h3 class="skills-category-title text-center"><i class="bi bi-cpu"></i> Technologies & Tools</h3>
+            <div class="tech-cloud">
+              <div class="tech-tag level-5">Python</div>
+              <div class="tech-tag level-4">Machine Learning</div>
+              <div class="tech-tag level-4">Data Analysis</div>
+              <div class="tech-tag level-3">SQL</div>
+              <div class="tech-tag level-3">NumPy</div>
+              <div class="tech-tag level-3">Pandas</div>
+              <div class="tech-tag level-4">TensorFlow</div>
+              <div class="tech-tag level-3">Scikit-learn</div>
+              <div class="tech-tag level-2">R</div>
+              <div class="tech-tag level-3">Git</div>
+              <div class="tech-tag level-3">Data Visualization</div>
+              <div class="tech-tag level-4">NLP</div>
+              <div class="tech-tag level-3">Neural Networks</div>
+              <div class="tech-tag level-2">OpenAI APIs</div>
+              <div class="tech-tag level-3">Matplotlib</div>
+              <div class="tech-tag level-3">Seaborn</div>
+              <div class="tech-tag level-2">Flask</div>
+              <div class="tech-tag level-2">Docker</div>
+              <div class="tech-tag level-1">AWS</div>
+              <div class="tech-tag level-1">Azure</div>
+              <div class="tech-tag level-3">Computer Vision</div>
+              <div class="tech-tag level-2">Web Scraping</div>
+            </div>
+          </div>
+        </div>
+
         <!-- Soft Skills Section -->
         <div class="row mt-5" data-aos="fade-up" data-aos-delay="300">
           <div class="col-lg-12">
@@ -292,7 +342,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section><!-- End Skills Section -->
 
@@ -331,23 +380,19 @@
           <div class="col-lg-6">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
-              <h4>Graduate Trainee</h4>
-              <h5>Feb 2023 - May 2023</h5>
-              <p><em>Indium Software, Chennai, Tamil Nadu, India</em></p>
-              <ul>
-                <li>Engaged in comprehensive training sessions covering core Java, MySQL, Python, web development, and project management, enhancing technical proficiency and software development skills.</li>
-                <li>Developed a capstone project utilizing Python and MySQL, showcasing the ability to integrate programming languages and effectively manage databases to solve real-world problems.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
               <h4>Associate Software Engineer</h4>
               <h5>April 2024 - Present</h5>
               <p><em>CGI, Bangalore, Karnataka, India</em></p>
               <ul>
-                <li>Developing enterprise-grade software solutions that incorporate data science and machine learning principles.</li>
-                <li>Collaborating with cross-functional teams to deliver scalable, efficient, and innovative software solutions.</li>
-                <li>Applying expertise in Python, data analysis, and software engineering to solve complex business problems.</li>
-                <li>Contributing to project architecture and design decisions to ensure optimal performance and maintainability.</li>
+                <li>Developed an unsupervised anomaly detection system on synthetic payroll data (>6M salary records), achieving <b>85% accuracy</b> and <b>80% recall</b> in identifying irregular salary changes and outliers.</li>
+                <li>Led the creation of a synthetic data generation framework for privacy-preserving analytics, maintaining <b>90% data fidelity</b> while enabling secure model development and cross-team collaboration.</li>
+                <li>Designed and deployed <b>AI-powered Applicant Tracking System (ATS) using Agentic AI</b> capable of generating job descriptions, resume scoring, candidate ranking, and shortlisting processes, reducing recruiter workload by <b>70%</b>.</li>
+                <li>Built a <b>Natural Language to SQL (NL2SQL)</b> interface using LLMs to convert business queries into executable SQL, increasing reporting productivity by <b>30%</b> and reducing manual query overhead.</li>
+                <li>Engineered a <b>hybrid RAG-LLM chatbot</b> to deliver intelligent FAQ support, filling critical application gap and enhancing customer support automation.</li>
+                <li>Implemented a voice-to-text transcription system using <b>OpenAI Whisper ASR model</b> for automated testimonial transcription, reducing manual effort by <b>60%</b> and enhancing content accessibility.</li>
+                <li>Developed a hybrid recommendation engine (collaborative + content-based filtering) for an e-commerce platform, improving product relevance and boosting engagement by <b>20%</b>.</li>
+                <li>Collaborated with cross-functional teams (data scientists, PMs, and stakeholders) within <b>sub-business unit</b> to integrate AI-driven insights, delivering <b>15+ business-aligned automation reports</b>.</li>
+                <li>Received <b>Platinum Award</b> from Business Unit leader for exceptional work on AI anomaly detection system, recognizing outstanding technical contribution and measurable business impact.</li>
               </ul>
             </div>
           </div>
@@ -364,7 +409,7 @@
       </div>
     </section><!-- End Resume Section -->
 
-<!-- ======= Portfolio Section ======= -->
+    <!-- ======= Portfolio Section ======= -->
 <section id="portfolio" class="portfolio section-bg">
   <div class="container" data-aos="fade-up">
 
@@ -546,6 +591,84 @@
 </section>
 <!-- End Portfolio Section -->
 
+<!-- ======= Project Timeline Section ======= -->
+<section id="project-timeline" class="project-timeline">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Project Timeline</h2>
+      <p>My journey of continuous learning and project development</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">AI-Powered Applicant Tracking System</h3>
+          <div class="timeline-date">July 2025</div>
+          <p>Built an Agentic AI-powered ATS that generates job descriptions, scores resumes, and ranks candidates, reducing recruiter workload by 70%.</p>
+          <span class="timeline-tech">LLMs, NLP, Agentic AI, Python</span>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Voice-to-Text Transcription System</h3>
+          <div class="timeline-date">May 2025</div>
+          <p>Implemented a voice-to-text transcription system using OpenAI Whisper ASR model for automated testimonial transcription, reducing manual effort by 60%.</p>
+          <span class="timeline-tech">Speech Recognition, ASR, Python</span>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Hybrid RAG-LLM Chatbot</h3>
+          <div class="timeline-date">March 2025</div>
+          <p>Engineered a hybrid Retrieval-Augmented Generation chatbot to deliver intelligent FAQ support and enhance customer support automation.</p>
+          <span class="timeline-tech">LLMs, RAG, Vector Databases</span>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Natural Language to SQL Interface</h3>
+          <div class="timeline-date">January 2025</div>
+          <p>Created an NL2SQL interface using LLMs that converts business queries to executable SQL, increasing reporting productivity by 30%.</p>
+          <span class="timeline-tech">SQL, LLMs, Python</span>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Hybrid Recommendation Engine</h3>
+          <div class="timeline-date">October 2024</div>
+          <p>Developed a hybrid recommendation engine combining collaborative and content-based filtering for an e-commerce platform, boosting engagement by 20%.</p>
+          <span class="timeline-tech">Python, Machine Learning, Collaborative Filtering</span>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Anomaly Detection using Autoencoder</h3>
+          <div class="timeline-date">May 2024</div>
+          <p>Developed an unsupervised anomaly detection system using Autoencoder for payroll data with 85% accuracy and 80% recall in identifying irregular salary changes.</p>
+          <span class="timeline-tech">Python, Unsupervised Learning, Deep Learning</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="#contact" class="btn-timeline-cta">Interested in collaborating? <i class="bx bx-envelope"></i> Contact Me</a>
+    </div>
+  </div>
+</section>
+<!-- End Project Timeline Section -->
+
 
     <!-- ======= Area of Intrest Section ======= -->
     <section id="services" class="services">
@@ -636,7 +759,97 @@
         </div>
 
       </div>
-    </section><!-- End Services Section -->    <!-- ======= Contact Section ======= -->    <section id="contact" class="contact">
+    </section><!-- End Services Section -->
+    
+    <!-- ======= Testimonials Section ======= -->
+    <!-- <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>What colleagues and collaborators say about my work</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="testimonial-avatar">
+                  <img src="assets/img/profile-img.jpg" alt="Testimonial Avatar" class="testimonial-img">
+                  <div class="testimonial-quote">
+                    <i class="bi bi-quote"></i>
+                  </div>
+                </div>
+                <h3>Priya Sharma</h3>
+                <h4>Project Manager | CGI</h4>
+                <p>
+                  "Michael's work on the anomaly detection system was exceptional. His ability to translate complex requirements into practical AI solutions saved our team countless hours and improved our reporting accuracy significantly."
+                </p>
+                <div class="testimonial-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="testimonial-avatar">
+                  <img src="assets/img/profile-img.jpg" alt="Testimonial Avatar" class="testimonial-img">
+                  <div class="testimonial-quote">
+                    <i class="bi bi-quote"></i>
+                  </div>
+                </div>
+                <h3>Raj Patel</h3>
+                <h4>Senior Data Scientist | TechInnovate</h4>
+                <p>
+                  "Collaborating with Michael on the NL2SQL project was a fantastic experience. His technical expertise and creative approach to solving complex problems resulted in a solution that our business users love. Highly recommended!"
+                </p>
+                <div class="testimonial-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="testimonial-avatar">
+                  <img src="assets/img/profile-img.jpg" alt="Testimonial Avatar" class="testimonial-img">
+                  <div class="testimonial-quote">
+                    <i class="bi bi-quote"></i>
+                  </div>
+                </div>
+                <h3>Aisha Khan</h3>
+                <h4>HR Director | GlobalTech</h4>
+                <p>
+                  "The AI-powered ATS Michael developed transformed our recruitment process. What used to take days now happens in hours, with better candidate matches. His attention to detail and understanding of HR challenges made this project a success."
+                </p>
+                <div class="testimonial-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section>End Testimonials Section -->
+    
+    <!-- ======= Contact Section ======= -->    <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -771,7 +984,16 @@
   </footer><!-- End Footer -->
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+  <!-- Progress Scroll Indicator -->
+  <div class="progress-container">
+    <div class="progress-bar" id="scrollProgress"></div>
+  </div>
+  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <div class="scroll-percent">0%</div>
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
